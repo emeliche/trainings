@@ -5,30 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Диета</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <h1>Мой план диеты</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="training.html">Тренировки</a></li>
-          <li><a href="diet.html">Диета</a></li>
-        </ul>
-      </nav>
+    <header class="header">
+      <div class="container">
+        <h1 class="header__title">Мой план диеты</h1>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li><a href="index.html" class="header__nav-link">Главная</a></li>
+            <li>
+              <a href="training.html" class="header__nav-link">Тренировки</a>
+            </li>
+            <li><a href="diet.html" class="header__nav-link">Диета</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <main>
-      <section>
-        <h2>Основные принципы питания</h2>
-        <ul>
-          <li>Белки: 1,5-2 г на кг веса</li>
-          <li>Углеводы: сложные (овсянка, гречка, рис)</li>
-          <li>Жиры: полезные (орехи, авокадо, оливковое масло)</li>
-        </ul>
-      </section>
+    <main class="main">
+      <div class="container">
+        <section class="diet">
+          <h2 class="diet__title">Основные принципы питания</h2>
+          <div class="diet__cards">
+            <div class="diet__card">
+              <h3 class="diet__card-title">Белки</h3>
+              <p class="diet__card-text">
+                1,5-2 г на кг веса. Источники: курица, рыба, яйца, творог.
+              </p>
+            </div>
+            <div class="diet__card">
+              <h3 class="diet__card-title">Углеводы</h3>
+              <p class="diet__card-text">
+                Сложные углеводы: овсянка, гречка, рис, цельнозерновой хлеб.
+              </p>
+            </div>
+            <div class="diet__card">
+              <h3 class="diet__card-title">Жиры</h3>
+              <p class="diet__card-text">
+                Полезные жиры: орехи, авокадо, оливковое масло, рыбий жир.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="diet">
+          <h2 class="diet__title">Пример рациона на день</h2>
+          <div class="diet__cards">
+            <div class="diet__card">
+              <h3 class="diet__card-title">Завтрак</h3>
+              <p class="diet__card-text">
+                Овсянка с ягодами и орехами, яйцо всмятку.
+              </p>
+            </div>
+            <div class="diet__card">
+              <h3 class="diet__card-title">Обед</h3>
+              <p class="diet__card-text">
+                Гречка с куриной грудкой, овощной салат.
+              </p>
+            </div>
+            <div class="diet__card">
+              <h3 class="diet__card-title">Ужин</h3>
+              <p class="diet__card-text">Рыба на пару с брокколи и киноа.</p>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
-    <footer>
-      <p>&copy; 2023 Мой тренировочный план</p>
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__text">&copy; 2023 Мой тренировочный план</p>
+      </div>
     </footer>
   </body>
 </html>

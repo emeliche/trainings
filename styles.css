@@ -70,6 +70,7 @@ body {
   color: var(--secondary-color);
 }
 
+/* Стили для тренировок */
 .week {
   background-color: var(--card-background);
   padding: 20px;
@@ -80,24 +81,40 @@ body {
 
 .week__title {
   font-size: 22px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.week__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.week__card {
+  background-color: var(--card-background);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.week__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.week__card-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--accent-color);
+}
+
+.week__card-text {
+  font-size: 14px;
+  color: var(--secondary-color);
+  line-height: 1.5;
   margin-bottom: 15px;
-}
-
-.week__list {
-  list-style: none;
-  padding: 0;
-}
-
-.week__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.week__item:last-child {
-  border-bottom: none;
 }
 
 .week__button {
@@ -108,10 +125,39 @@ body {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  width: 100%;
 }
 
 .week__button:hover {
   background-color: #0056b3;
+}
+
+.week__button.completed {
+  background-color: #28a745;
+  cursor: default;
+}
+
+.week__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background-color: #28a745;
+  width: 0%;
+  transition: width 0.3s ease;
 }
 
 /* Подвал */

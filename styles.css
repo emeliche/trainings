@@ -1,42 +1,129 @@
+/* Основные стили */
+:root {
+  --primary-color: #333;
+  --secondary-color: #555;
+  --accent-color: #007bff;
+  --background-color: #f9f9f9;
+  --card-background: #fff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  line-height: 1.6;
 }
 
-header {
-  background-color: #333;
-  color: white;
-  padding: 10px 0;
-  text-align: center;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-nav ul {
-  list-style-type: none;
+/* Шапка */
+.header {
+  background-color: var(--card-background);
+  box-shadow: var(--shadow);
+  padding: 20px 0;
+}
+
+.header__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header__nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  gap: 20px;
+}
+
+.header__nav-link {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.header__nav-link:hover {
+  color: var(--accent-color);
+}
+
+/* Основной контент */
+.main {
+  padding: 40px 0;
+}
+
+.welcome__title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.welcome__text {
+  font-size: 16px;
+  color: var(--secondary-color);
+}
+
+.week {
+  background-color: var(--card-background);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.week__title {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.week__list {
+  list-style: none;
   padding: 0;
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-main {
-  padding: 20px;
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
+.week__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px 0;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.week__item:last-child {
+  border-bottom: none;
+}
+
+.week__button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.week__button:hover {
+  background-color: #0056b3;
+}
+
+/* Подвал */
+.footer {
+  background-color: var(--card-background);
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: var(--shadow);
+  margin-top: 40px;
+}
+
+.footer__text {
+  margin: 0;
+  color: var(--secondary-color);
 }

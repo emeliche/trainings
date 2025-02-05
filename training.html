@@ -5,38 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Тренировки</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <h1>Мой план тренировок</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="training.html">Тренировки</a></li>
-          <li><a href="diet.html">Диета</a></li>
-        </ul>
-      </nav>
+    <header class="header">
+      <div class="container">
+        <h1 class="header__title">Мой план тренировок</h1>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li><a href="index.html" class="header__nav-link">Главная</a></li>
+            <li>
+              <a href="training.html" class="header__nav-link">Тренировки</a>
+            </li>
+            <li><a href="diet.html" class="header__nav-link">Диета</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <main>
-      <section>
-        <h2>Неделя 1-2: Адаптация</h2>
-        <ul>
-          <li>Кардио: 15-20 минут</li>
-          <li>Приседания: 12-15 повторений</li>
-          <li>Отжимания: 10-12 повторений</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Неделя 3-4: Увеличение интенсивности</h2>
-        <ul>
-          <li>Кардио: 20-25 минут</li>
-          <li>Приседания с гантелями: 12 повторений</li>
-          <li>Жим гантелей: 12 повторений</li>
-        </ul>
-      </section>
+    <main class="main">
+      <div class="container">
+        <section class="week">
+          <h2 class="week__title">Неделя 1-2: Адаптация</h2>
+          <ul class="week__list">
+            <li class="week__item">
+              <span>Кардио: 15-20 минут</span>
+              <button
+                class="week__button"
+                onclick="markCompleted('cardio-week1')"
+              >
+                Отметить выполненным
+              </button>
+            </li>
+            <li class="week__item">
+              <span>Приседания: 12-15 повторений</span>
+              <button
+                class="week__button"
+                onclick="markCompleted('squats-week1')"
+              >
+                Отметить выполненным
+              </button>
+            </li>
+          </ul>
+        </section>
+        <section class="week">
+          <h2 class="week__title">Неделя 3-4: Увеличение интенсивности</h2>
+          <ul class="week__list">
+            <li class="week__item">
+              <span>Кардио: 20-25 минут</span>
+              <button
+                class="week__button"
+                onclick="markCompleted('cardio-week3')"
+              >
+                Отметить выполненным
+              </button>
+            </li>
+            <li class="week__item">
+              <span>Приседания с гантелями: 12 повторений</span>
+              <button
+                class="week__button"
+                onclick="markCompleted('squats-week3')"
+              >
+                Отметить выполненным
+              </button>
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
-    <footer>
-      <p>&copy; 2023 Мой тренировочный план</p>
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__text">&copy; 2023 Мой тренировочный план</p>
+      </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

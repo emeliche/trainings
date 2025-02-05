@@ -1,12 +1,7 @@
-function markCompleted(taskId) {
-  const button = document.querySelector(
-    `[onclick="markCompleted('${taskId}')"]`
-  );
-  if (button) {
-    button.classList.add("completed");
-    button.textContent = "Выполнено";
-    button.disabled = true;
-    localStorage.setItem(taskId, "completed");
+function toggleWeek(weekId) {
+  const weekContent = document.getElementById(`${weekId}-content`);
+  if (weekContent) {
+    weekContent.classList.toggle("expanded");
   }
 }
 
@@ -49,6 +44,12 @@ function updateProgressBar(progressBarId, totalTrainings) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Скрываем контент всех недель по умолчанию
+  const weekContents = document.querySelectorAll(".week__content");
+  weekContents.forEach((content) => {
+    content.classList.add("collapsed");
+  });
+
   // Восстанавливаем состояние кнопок и прогресс-баров
   const buttons = document.querySelectorAll(".week__button");
   buttons.forEach((button) => {
@@ -61,5 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Обновляем прогресс-бары
   updateProgressBar("progress-week1", 3);
+  updateProgressBar("progress-week2", 3);
   updateProgressBar("progress-week3", 3);
+  updateProgressBar("progress-week4", 3);
 });

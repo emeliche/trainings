@@ -29,110 +29,226 @@
     </header>
     <main class="main">
       <div class="container">
-        <!-- Неделя 1-2 -->
+        <!-- Неделя 1 -->
         <section class="week">
-          <div class="week__header">
-            <h2 class="week__title">Неделя 1-2: Адаптация</h2>
+          <div class="week__header" onclick="toggleWeek('week1')">
+            <h2 class="week__title">Неделя 1: Адаптация</h2>
             <div class="progress-bar">
               <div class="progress-bar__fill" id="progress-week1"></div>
             </div>
           </div>
-          <div class="week__cards">
-            <div class="week__card">
-              <h3 class="week__card-title">Тренировка 1</h3>
-              <ul class="week__card-list">
-                <li>Кардио: 15-20 минут</li>
-                <li>Приседания: 3 подхода по 12-15 повторений</li>
-                <li>Отжимания: 3 подхода по 10-12 повторений</li>
-                <li>Тяга верхнего блока: 3 подхода по 12 повторений</li>
-              </ul>
-              <button
-                class="week__button"
-                onclick="toggleCompleted('week1-training1', 'progress-week1', 3)"
-              >
-                Отметить выполненной
-              </button>
-            </div>
-            <div class="week__card">
-              <h3 class="week__card-title">Тренировка 2</h3>
-              <ul class="week__card-list">
-                <li>Кардио: 15-20 минут</li>
-                <li>Жим гантелей: 3 подхода по 10-12 повторений</li>
-                <li>Выпады: 3 подхода по 10 повторений на каждую ногу</li>
-                <li>Планка: 3 подхода по 30 секунд</li>
-              </ul>
-              <button
-                class="week__button"
-                onclick="toggleCompleted('week1-training2', 'progress-week1', 3)"
-              >
-                Отметить выполненной
-              </button>
-            </div>
-            <div class="week__card">
-              <h3 class="week__card-title">Тренировка 3</h3>
-              <ul class="week__card-list">
-                <li>Кардио: 20 минут</li>
-                <li>Растяжка: 10 минут</li>
-              </ul>
-              <button
-                class="week__button"
-                onclick="toggleCompleted('week1-training3', 'progress-week1', 3)"
-              >
-                Отметить выполненной
-              </button>
+          <div class="week__content" id="week1-content">
+            <div class="week__cards">
+              <div class="week__card">
+                <h3 class="week__card-title">Тренировка 1</h3>
+                <ul class="week__card-list">
+                  <li>Кардио: 15-20 минут</li>
+                  <li>Приседания: 3 подхода по 12-15 повторений</li>
+                  <li>Отжимания: 3 подхода по 10-12 повторений</li>
+                  <li>Тяга верхнего блока: 3 подхода по 12 повторений</li>
+                </ul>
+                <button
+                  class="week__button"
+                  onclick="toggleCompleted('week1-training1', 'progress-week1', 3)"
+                >
+                  Отметить выполненной
+                </button>
+              </div>
+              <div class="week__card">
+                <h3 class="week__card-title">Тренировка 2</h3>
+                <ul class="week__card-list">
+                  <li>Кардио: 15-20 минут</li>
+                  <li>Жим гантелей: 3 подхода по 10-12 повторений</li>
+                  <li>Выпады: 3 подхода по 10 повторений на каждую ногу</li>
+                  <li>Планка: 3 подхода по 30 секунд</li>
+                </ul>
+                <button
+                  class="week__button"
+                  onclick="toggleCompleted('week1-training2', 'progress-week1', 3)"
+                >
+                  Отметить выполненной
+                </button>
+              </div>
+              <div class="week__card">
+                <h3 class="week__card-title">Тренировка 3</h3>
+                <ul class="week__card-list">
+                  <li>Кардио: 20 минут</li>
+                  <li>Растяжка: 10 минут</li>
+                </ul>
+                <button
+                  class="week__button"
+                  onclick="toggleCompleted('week1-training3', 'progress-week1', 3)"
+                >
+                  Отметить выполненной
+                </button>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- Неделя 3-4 -->
+        <!-- Неделя 2 -->
         <section class="week">
-          <div class="week__header">
-            <h2 class="week__title">Неделя 3-4: Увеличение интенсивности</h2>
+          <div class="week__header" onclick="toggleWeek('week2')">
+            <h2 class="week__title">Неделя 2: Базовая нагрузка</h2>
+            <div class="progress-bar">
+              <div class="progress-bar__fill" id="progress-week2"></div>
+            </div>
+          </div>
+          <div class="week__content" id="week2-content">
+            <div class="week__cards">
+              <div class="week__card">
+                <h3 class="week__card-title">Тренировка 1</h3>
+                <ul class="week__card-list">
+                  <li>Интервальное кардио: 20-25 минут</li>
+                  <li>Приседания с гантелями: 3 подхода по 12 повторений</li>
+                  <li>Жим штанги: 3 подхода по 8-10 повторений</li>
+                </ul>
+                <button
+                  class="week__button"
+                  onclick="toggleCompleted('week2-training1', 'progress-week2', 3)"
+                >
+                  Отметить выполненной
+                </button>
+              </div>
+              <div class="week__card">
+                <h3 class="week__card-title">Тренировка 2</h3>
+                <ul class="week__card-list">
+                  <li>Интервальное кардио: 20-25 минут</li>
+                  <li>
+                    Тяга гантели: 3 подхода по 10 повторений на каждую руку
+                  </li>
+                  <li>Подтягивания: 3 подхода по 8-10 повторений</li>
+                </ul>
+                <button
+                  class="week__button"
+                  onclick="toggleCompleted('week2-training2', 'progress-week2', 3)"
+                >
+                  Отметить выполненной
+                </button>
+              </div>
+              <div class="week__card">
+                <h3 class="week__card-title">Тренировка 3</h3>
+                <ul class="week__card-list">
+                  <li>Кардио: 25 минут</li>
+                  <li>Растяжка: 10 минут</li>
+                </ul>
+                <button
+                  class="week__button"
+                  onclick="toggleCompleted('week2-training3', 'progress-week2', 3)"
+                >
+                  Отметить выполненной
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Неделя 3 -->
+        <section class="week">
+          <div class="week__header" onclick="toggleWeek('week3')">
+            <h2 class="week__title">Неделя 3: Увеличение интенсивности</h2>
             <div class="progress-bar">
               <div class="progress-bar__fill" id="progress-week3"></div>
             </div>
           </div>
-          <div class="week__cards">
-            <div class="week__card">
-              <h3 class="week__card-title">Тренировка 1</h3>
-              <ul class="week__card-list">
-                <li>Интервальное кардио: 20-25 минут</li>
-                <li>Приседания с гантелями: 3 подхода по 12 повторений</li>
-                <li>Жим штанги: 3 подхода по 8-10 повторений</li>
-              </ul>
-              <button
-                class="week__button"
-                onclick="toggleCompleted('week3-training1', 'progress-week3', 3)"
-              >
-                Отметить выполненной
-              </button>
+          <div class="week__content" id="week3-content">
+            <div class="week__cards">
+              <div class="week__card">
+                <h3 class="week__card-title">Тренировка 1</h3>
+                <ul class="week__card-list">
+                  <li>Интервальное кардио: 20-25 минут</li>
+                  <li>Становая тяга: 3 подхода по 10 повторений</li>
+                  <li>Жим ногами: 3 подхода по 12 повторений</li>
+                </ul>
+                <button
+                  class="week__button"
+                  onclick="toggleCompleted('week3-training1', 'progress-week3', 3)"
+                >
+                  Отметить выполненной
+                </button>
+              </div>
+              <div class="week__card">
+                <h3 class="week__card-title">Тренировка 2</h3>
+                <ul class="week__card-list">
+                  <li>Интервальное кардио: 20-25 минут</li>
+                  <li>Махи гантелями: 3 подхода по 12 повторений</li>
+                  <li>Отжимания на брусьях: 3 подхода по 8-10 повторений</li>
+                </ul>
+                <button
+                  class="week__button"
+                  onclick="toggleCompleted('week3-training2', 'progress-week3', 3)"
+                >
+                  Отметить выполненной
+                </button>
+              </div>
+              <div class="week__card">
+                <h3 class="week__card-title">Тренировка 3</h3>
+                <ul class="week__card-list">
+                  <li>Кардио: 25 минут</li>
+                  <li>Растяжка: 10 минут</li>
+                </ul>
+                <button
+                  class="week__button"
+                  onclick="toggleCompleted('week3-training3', 'progress-week3', 3)"
+                >
+                  Отметить выполненной
+                </button>
+              </div>
             </div>
-            <div class="week__card">
-              <h3 class="week__card-title">Тренировка 2</h3>
-              <ul class="week__card-list">
-                <li>Интервальное кардио: 20-25 минут</li>
-                <li>Тяга гантели: 3 подхода по 10 повторений на каждую руку</li>
-                <li>Подтягивания: 3 подхода по 8-10 повторений</li>
-              </ul>
-              <button
-                class="week__button"
-                onclick="toggleCompleted('week3-training2', 'progress-week3', 3)"
-              >
-                Отметить выполненной
-              </button>
+          </div>
+        </section>
+
+        <!-- Неделя 4 -->
+        <section class="week">
+          <div class="week__header" onclick="toggleWeek('week4')">
+            <h2 class="week__title">Неделя 4: Финальная нагрузка</h2>
+            <div class="progress-bar">
+              <div class="progress-bar__fill" id="progress-week4"></div>
             </div>
-            <div class="week__card">
-              <h3 class="week__card-title">Тренировка 3</h3>
-              <ul class="week__card-list">
-                <li>Кардио: 25 минут</li>
-                <li>Растяжка: 10 минут</li>
-              </ul>
-              <button
-                class="week__button"
-                onclick="toggleCompleted('week3-training3', 'progress-week3', 3)"
-              >
-                Отметить выполненной
-              </button>
+          </div>
+          <div class="week__content" id="week4-content">
+            <div class="week__cards">
+              <div class="week__card">
+                <h3 class="week__card-title">Тренировка 1</h3>
+                <ul class="week__card-list">
+                  <li>Интервальное кардио: 20-25 минут</li>
+                  <li>Приседания со штангой: 3 подхода по 8-10 повторений</li>
+                  <li>Жим лежа: 3 подхода по 8-10 повторений</li>
+                </ul>
+                <button
+                  class="week__button"
+                  onclick="toggleCompleted('week4-training1', 'progress-week4', 3)"
+                >
+                  Отметить выполненной
+                </button>
+              </div>
+              <div class="week__card">
+                <h3 class="week__card-title">Тренировка 2</h3>
+                <ul class="week__card-list">
+                  <li>Интервальное кардио: 20-25 минут</li>
+                  <li>Подтягивания: 3 подхода по 8-10 повторений</li>
+                  <li>Тяга штанги в наклоне: 3 подхода по 10 повторений</li>
+                </ul>
+                <button
+                  class="week__button"
+                  onclick="toggleCompleted('week4-training2', 'progress-week4', 3)"
+                >
+                  Отметить выполненной
+                </button>
+              </div>
+              <div class="week__card">
+                <h3 class="week__card-title">Тренировка 3</h3>
+                <ul class="week__card-list">
+                  <li>Кардио: 25 минут</li>
+                  <li>Растяжка: 10 минут</li>
+                </ul>
+                <button
+                  class="week__button"
+                  onclick="toggleCompleted('week4-training3', 'progress-week4', 3)"
+                >
+                  Отметить выполненной
+                </button>
+              </div>
             </div>
           </div>
         </section>
